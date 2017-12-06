@@ -109,7 +109,7 @@
 <meta property="og:site_name" content="冷兵器时代">
 <meta property="og:description" content="TMUX is a terminal multiplexer: it enables a number of terminals to be created,accessed, and controlled from a single screen.  tmux may be detached from a screen and continue running in the backgroun">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-11-09T09:55:27.893Z">
+<meta property="og:updated_time" content="2017-11-12T16:40:00.553Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="TMUX-terminal multiplexer">
 <meta name="twitter:description" content="TMUX is a terminal multiplexer: it enables a number of terminals to be created,accessed, and controlled from a single screen.  tmux may be detached from a screen and continue running in the backgroun">
@@ -331,7 +331,10 @@
 <h2 id="1-安装"><a href="#1-安装" class="headerlink" title="1. 安装"></a>1. 安装</h2><h3 id="Archlinux"><a href="#Archlinux" class="headerlink" title="Archlinux"></a>Archlinux</h3><pre><code>sudo pacman -S tmux
 </code></pre><h3 id="Ubuntu"><a href="#Ubuntu" class="headerlink" title="Ubuntu"></a>Ubuntu</h3><pre><code>sudo apt-get install tmux
 </code></pre><h2 id="2-启动"><a href="#2-启动" class="headerlink" title="2. 启动"></a>2. 启动</h2><pre><code>$ tmux new -s yoursession
-</code></pre>
+</code></pre><h2 id="3-基本设置"><a href="#3-基本设置" class="headerlink" title="3. 基本设置"></a>3. 基本设置</h2><p>tmux的所有快捷键操作都需要前缀支持，默认前缀为<code>C-b</code>。因与Emacs冲突，更改为<code>C-z</code></p>
+<pre><code>unbind ^b
+set -g prefix &apos;C-z&apos;
+</code></pre><h2 id="4-常用快捷键"><a href="#4-常用快捷键" class="headerlink" title="4. 常用快捷键"></a>4. 常用快捷键</h2>
       
     </div>
 
@@ -434,7 +437,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">21</span>
+              <span class="site-state-item-count">22</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -480,7 +483,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-安装"><span class="nav-text">1. 安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Archlinux"><span class="nav-text">Archlinux</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Ubuntu"><span class="nav-text">Ubuntu</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-启动"><span class="nav-text">2. 启动</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-安装"><span class="nav-text">1. 安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Archlinux"><span class="nav-text">Archlinux</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Ubuntu"><span class="nav-text">Ubuntu</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-启动"><span class="nav-text">2. 启动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-基本设置"><span class="nav-text">3. 基本设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-常用快捷键"><span class="nav-text">4. 常用快捷键</span></a></li></ol></div>
             
           </div>
         </section>
