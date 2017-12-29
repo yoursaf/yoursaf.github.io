@@ -1,0 +1,646 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Roboto Slab:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="emacs," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content=";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;.emacs-Version1.0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;">
+<meta name="keywords" content="emacs">
+<meta property="og:type" content="article">
+<meta property="og:title" content="我的Emacs设置">
+<meta property="og:url" content="http://yoursaf.cn/Linux/emacs/emacsconfig.html">
+<meta property="og:site_name" content="冷兵器时代">
+<meta property="og:description" content=";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;.emacs-Version1.0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-11-09T09:55:27.965Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="我的Emacs设置">
+<meta name="twitter:description" content=";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;.emacs-Version1.0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursaf.cn/Linux/emacs/emacsconfig.html"/>
+
+  <title> 我的Emacs设置 | 冷兵器时代 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">冷兵器时代</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">My life will not be mediocre.</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-links">
+          <a href="/links" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-link"></i> <br />
+            
+            链接
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-study">
+          <a href="/categories/study" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-book"></i> <br />
+            
+            学习
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                我的Emacs设置
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-09-09T11:26:17+08:00" content="2016-09-09">
+              2016-09-09
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类：</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Linux/emacs/" itemprop="url" rel="index">
+                    <span itemprop="name">emacs</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <figure class="highlight lisp"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;</span></span><br><span class="line"><span class="comment">;;;;;;;;;;.emacs-Version1.0;;;;;;;;;;</span></span><br><span class="line"><span class="comment">;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;</span></span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<figure class="highlight lisp"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">(<span class="name">add-to-list</span> 'load-path <span class="string">"~/.emacs.d/lisp"</span>)</span><br><span class="line">(<span class="name">load-file</span> <span class="string">"~/.emacs.d/lisp/yoursaf-calm.el"</span>)</span><br><span class="line">(<span class="name">yoursaf-calm</span>)</span><br><span class="line">(<span class="name">load-file</span> <span class="string">"~/.emacs.d/lisp/my-auto-complete.el"</span>)</span><br><span class="line">(<span class="name">require</span> 'edit-server)</span><br><span class="line">(<span class="name">edit-server-start</span>)</span><br><span class="line"><span class="comment">;(add-to-list 'load-path "~/.emacs.d/git-emacs/")</span></span><br><span class="line"><span class="comment">;(require 'git-emacs)</span></span><br><span class="line"><span class="comment">;(load-file "~/.emacs.d/internet.el")</span></span><br><span class="line">(<span class="name">require</span> 'tabbar)</span><br><span class="line">(<span class="name">tabbar-mode</span>)</span><br><span class="line">(<span class="name">require</span> 'sr-speedbar)</span><br><span class="line">(<span class="name">setq</span> speedbar-use-images <span class="literal">nil</span>)  </span><br><span class="line">(<span class="name">setq</span> sr-speedbar-width <span class="number">30</span>)</span><br><span class="line">(<span class="name">add-to-list</span> 'load-path <span class="string">"~/.emacs.d/lisp/yasnippet-master"</span>)</span><br><span class="line">(<span class="name">require</span> 'yasnippet)</span><br><span class="line">(<span class="name">yas-global-mode</span> <span class="number">1</span>)</span><br><span class="line"><span class="comment">;(load-file "~/.emacs.d/highlight.el")</span></span><br><span class="line"><span class="comment">;(require 'highlight)</span></span><br><span class="line"><span class="comment">;; Load CEDET</span></span><br><span class="line"><span class="comment">;(load-file "/usr/share/emacs/site-lisp/cedet/common/cedet.el")</span></span><br><span class="line"><span class="comment">;(require 'ecb-autoloads)</span></span><br><span class="line"><span class="comment">;;;;=============================界面和全局设置</span></span><br><span class="line">(<span class="name">setq</span> default-frame-alist ' ((<span class="name">height</span> . <span class="number">33</span>)(<span class="name">width</span> . <span class="number">80</span>)(<span class="name">alpha</span> <span class="number">95</span> <span class="number">60</span>)))<span class="comment">;;打开时的默认宽度和透明度以及不在焦点时的透明度</span></span><br><span class="line">(<span class="name">show-paren-mode</span> <span class="literal">t</span>)<span class="comment">;高亮显示括号匹配</span></span><br><span class="line">(<span class="name">setq</span> visible-bell <span class="literal">nil</span>)<span class="comment">;禁用响铃</span></span><br><span class="line">(<span class="name">setq</span> transient-mark-mode <span class="literal">t</span>)<span class="comment">;;选中区域高亮</span></span><br><span class="line">(<span class="name">custom-set-variables</span></span><br><span class="line"> <span class="comment">;; custom-set-variables was added by Custom.</span></span><br><span class="line"> <span class="comment">;; If you edit it by hand, you could mess it up, so be careful.</span></span><br><span class="line"> <span class="comment">;; Your init file should contain only one such instance.</span></span><br><span class="line"> <span class="comment">;; If there is more than one, they won't work right.</span></span><br><span class="line"> '(column-number-mode t)</span><br><span class="line"> '(display-time-mode t)</span><br><span class="line"> '(scroll-bar-mode (quote right))</span><br><span class="line"> '(show-paren-mode t))</span><br><span class="line">(<span class="name">setq</span> display-time-24hr-format <span class="literal">t</span>)</span><br><span class="line">(<span class="name">setq</span> x-select-enable-clipboard <span class="literal">t</span>)<span class="comment">;使用X的剪贴板</span></span><br><span class="line"><span class="comment">;(setq display-time-day-and-date t)</span></span><br><span class="line"><span class="comment">;(setq default-frame-alist ' ((height . 38)(width . 100)));;</span></span><br><span class="line"><span class="comment">;(set-frame-parameter (selected-frame) 'alpha '(85 50))</span></span><br><span class="line"><span class="comment">;  (add-to-list 'default-frame-alist '(alpha 85 50))</span></span><br><span class="line"><span class="comment">;(customize-set-variable 'scroll-bar-mode 'right);;滚动栏右侧显示</span></span><br><span class="line">(<span class="name">tool-bar-mode</span> <span class="number">-1</span>)<span class="comment">;关闭工具栏</span></span><br><span class="line">(<span class="name">menu-bar-mode</span> <span class="number">-1</span>)<span class="comment">;关闭菜单栏</span></span><br><span class="line"><span class="comment">;(setq inhibit-startup-message t);;关闭启动信息</span></span><br><span class="line"><span class="comment">;(setq initial-scratch-message "")</span></span><br><span class="line">(<span class="name">ido-mode</span> <span class="literal">t</span>)<span class="comment">;打开ido支持.在用C-x C-f打开文件时缓冲区会出现提示</span></span><br><span class="line"><span class="comment">;(split-window-horizontally);启动时自动打开两个垂直窗口</span></span><br><span class="line"><span class="comment">;(split-window-vertically);启动时自动打开两个横向窗口</span></span><br><span class="line"><span class="comment">;(display-time);;显示时间</span></span><br><span class="line"></span><br><span class="line">(<span class="name">require</span> 'electric)</span><br><span class="line">(<span class="name">electric-pair-mode</span> <span class="literal">t</span>)<span class="comment">;自动补全括号</span></span><br><span class="line">(<span class="name">electric-indent-mode</span> <span class="literal">t</span>)<span class="comment">;智能缩进</span></span><br><span class="line">(<span class="name">setq</span> show-paren-style 'parentheses)<span class="comment">;括号匹配但不来回弹跳</span></span><br><span class="line"><span class="comment">;(set-default 'truncate-lines t);关闭自动换行功能</span></span><br><span class="line">(<span class="name">auto-fill-mode</span>)</span><br><span class="line">(<span class="name">setq</span> shell-file-name <span class="string">"/bin/bash"</span>)</span><br><span class="line"><span class="comment">;(setq default-major-mode 'text-mode);转为模式为text-mode</span></span><br><span class="line">(<span class="name">setq</span> inhibit-startup-message <span class="literal">t</span>)<span class="comment">;不显示启动画面</span></span><br><span class="line">(<span class="name">setq</span> gnus-inhibit-startup-message <span class="literal">t</span>)<span class="comment">;不显示GNU启动画面</span></span><br><span class="line">(<span class="name">setq</span> font-lock-maximum-decoration <span class="literal">t</span>)<span class="comment">;用最丰富的颜色显示</span></span><br><span class="line">(<span class="name">setq</span> frame-title-format <span class="string">"yoursaf@--&gt;%b"</span>)<span class="comment">;在标题栏显示文件完整路径</span></span><br><span class="line">(<span class="name">setq-default</span> line-spacing <span class="number">4</span>)<span class="comment">;设置行距</span></span><br><span class="line">(<span class="name">setq-default</span> indent-tabs-mode <span class="literal">nil</span>)<span class="comment">;  TAB插入空格</span></span><br><span class="line">(<span class="name">setq</span> default-tab-width <span class="number">4</span>)<span class="comment">;tab4个字符宽度</span></span><br><span class="line">(<span class="name">auto-image-file-mode</span> <span class="literal">t</span>)<span class="comment">;;打开图片显示功能</span></span><br><span class="line">(<span class="name">setq</span> auto-save-default <span class="literal">nil</span>)<span class="comment">;关闭自动保存模式</span></span><br><span class="line">(<span class="name">setq</span> make-backup-files <span class="literal">nil</span>)<span class="comment">;;关闭自动备份功能</span></span><br><span class="line"><span class="comment">;(setq backup-by-copying t);设定备份文件的方式为拷贝</span></span><br><span class="line">(<span class="name">setq</span> backup-directory-alist '((<span class="string">"."</span> . <span class="string">"~/.backupemacs"</span>)))<span class="comment">;设置默认存放备份文件的目录</span></span><br><span class="line"><span class="comment">;(setq-default make-backup-file nil);不生成备份文件</span></span><br><span class="line">(<span class="name">ansi-color-for-comint-mode-on</span>)<span class="comment">;eshell乱码</span></span><br><span class="line"><span class="comment">;(windmove-default-keybindings);开启使用S+方向键选择window</span></span><br><span class="line"><span class="comment">;(setq mouse-yank-at-point t)</span></span><br><span class="line"><span class="comment">;(setq default-directory "~/study/");设置默认的工作目录</span></span><br><span class="line">(<span class="name">require</span> 'linum)</span><br><span class="line">(<span class="name">global-linum-mode</span> <span class="literal">t</span>)<span class="comment">;显示行号</span></span><br><span class="line"><span class="comment">;(global-font-lock-mode t);语法高亮</span></span><br><span class="line">(<span class="name">column-number-mode</span> <span class="literal">t</span>)<span class="comment">;;加速开启语法显示大文件的移动速度</span></span><br><span class="line"><span class="comment">;(require 'ibuffer)  ;;用ibuffer替换默认的buffer</span></span><br><span class="line"><span class="comment">;(global-set-key (kbd "C-x C-b") 'ibuffer)  </span></span><br><span class="line"></span><br><span class="line"><span class="comment">;;;===============================字体设置</span></span><br><span class="line"><span class="comment">;(set-default-font "Courier 11");设置默认字体</span></span><br><span class="line"><span class="comment">;(set-default-font "DejaVu Sans Mono 11")</span></span><br><span class="line">(<span class="name">set-default-font</span> <span class="string">"Inconsolata 14"</span>)</span><br><span class="line"><span class="comment">;(set-default-font "Roboto Slab 12")</span></span><br><span class="line"><span class="comment">;(set-default-font "Iosevka Slab 12")</span></span><br><span class="line"><span class="comment">;(set-default-font "Consolas 12")</span></span><br><span class="line">(<span class="name">set-fontset-font</span> <span class="string">"fontset-default"</span></span><br><span class="line">                  'han  '(<span class="string">"文泉驿微米黑"</span> . <span class="string">"unicode-bmp"</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment">;;;===============================color-theme</span></span><br><span class="line"><span class="comment">;(require 'color-theme)</span></span><br><span class="line"><span class="comment">;    (color-theme-initialize)</span></span><br><span class="line"><span class="comment">;   (color-theme-calm-forest);oswald,Euphoria,Calm Forest,tty dark,Hober,,xemacs,gnome2</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">;;=====快捷键=====</span></span><br><span class="line"></span><br><span class="line">(<span class="name">global-set-key</span> [f1] 'split-window-horizontally)</span><br><span class="line">(<span class="name">global-set-key</span> [C-f1] 'split-window-vertically)</span><br><span class="line">(<span class="name">global-set-key</span> [f2] 'find-file)</span><br><span class="line">(<span class="name">global-set-key</span> [C-f2] 'find-file-other-window)</span><br><span class="line">(<span class="name">global-set-key</span> [f3] 'delete-other-windows)</span><br><span class="line">(<span class="name">global-set-key</span> [C-f3] 'delete-window)</span><br><span class="line">(<span class="name">global-set-key</span> [M-f3] 'kill-buffer)</span><br><span class="line">(<span class="name">global-set-key</span> [f4] 'other-window)</span><br><span class="line">(<span class="name">global-set-key</span> [f5] 'switch-to-buffer)</span><br><span class="line">(<span class="name">global-set-key</span> [C-f5] 'display-buffer)</span><br><span class="line"><span class="comment">;(global-set-key [(C-f5)] 'switch-to-buffer-other-window)</span></span><br><span class="line">(<span class="name">global-set-key</span> [f6] 'enlarge-window)</span><br><span class="line">(<span class="name">global-set-key</span> [C-f6] 'shrink-window)</span><br><span class="line">(<span class="name">global-set-key</span> [M-f6] 'balance-windows)</span><br><span class="line">(<span class="name">global-set-key</span> [f7] (<span class="name">lambda</span> () (<span class="name">interactive</span>) (<span class="name">term</span> <span class="string">"/bin/bash"</span>)))</span><br><span class="line"><span class="comment">;(global-set-key [C-f7] (lambda ()(interactive)(split-window-horizontally)(term "/bin/bash")))</span></span><br><span class="line"><span class="comment">;(global-set-key [M-f7] (lambda ()(interactive)(split-window-vertically)(term "/bin/bash")))</span></span><br><span class="line">(<span class="name">global-set-key</span> [C-f8] 'save-buffer)</span><br><span class="line">(<span class="name">global-set-key</span> [M-f8] 'save-some-buffers)</span><br><span class="line">(<span class="name">global-set-key</span> [f11] 'sr-speedbar-toggle)</span><br><span class="line">(<span class="name">global-set-key</span> [C-f11] 'dired)</span><br><span class="line">(<span class="name">global-set-key</span> [M-f11] 'speedbar)</span><br><span class="line">(<span class="name">global-set-key</span> [f12] 'undo)</span><br><span class="line"><span class="comment">;(global-set-key [C-f12] 'load-file ~/.emacs)</span></span><br><span class="line">(<span class="name">global-set-key</span> [C-f12] (<span class="name">lambda</span> () (<span class="name">interactive</span>)(<span class="name">load-file</span> <span class="string">"~/.emacs"</span>)))</span><br><span class="line">(<span class="name">global-set-key</span> [up] 'windmove-up)</span><br><span class="line">(<span class="name">global-set-key</span> [down] 'windmove-down)</span><br><span class="line">(<span class="name">global-set-key</span> [left] 'windmove-left)</span><br><span class="line">(<span class="name">global-set-key</span> [right] 'windmove-right)</span><br><span class="line"><span class="comment">;(global-set-key [M-up] 'previous-buffer)</span></span><br><span class="line"><span class="comment">;(global-set-key [M-down] 'next-buffer)</span></span><br><span class="line">(<span class="name">global-set-key</span> [M-up] 'tabbar-forward-tab)</span><br><span class="line">(<span class="name">global-set-key</span> [M-down] 'tabbar-backward-tab)</span><br><span class="line"></span><br><span class="line"><span class="comment">;=====退出term后关闭窗口=====</span></span><br><span class="line"></span><br><span class="line">(<span class="name">defun</span> kill-when-exit()</span><br><span class="line">(<span class="name">let</span> ((<span class="name">current-process</span> (<span class="name">ignore-errors</span> (<span class="name">get-buffer-process</span> (<span class="name">current-buffer</span>)))))</span><br><span class="line">(<span class="name">when</span> current-process</span><br><span class="line">(<span class="name">set-process-sentinel</span> current-process</span><br><span class="line">(<span class="name">lambda</span> (<span class="name">watch-process</span> change-state)</span><br><span class="line">(<span class="name">when</span> (<span class="name">string-match</span> <span class="string">"\\(finished\\|exited\\)"</span> change-state)</span><br><span class="line">(<span class="name">kill-buffer</span> (<span class="name">process-buffer</span> watch-process))))))))</span><br><span class="line">(<span class="name">add-hook</span> 'term-mode-hook 'kill-when-exit)</span><br><span class="line">(<span class="name">add-hook</span> 'gdb-mode-hook 'kill-when-exit)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">;(require 'erc)</span></span><br><span class="line"><span class="comment">;(setq-default erc-nick "yoursaf")</span></span><br><span class="line"><span class="comment">;(erc-autojoin-mode t)</span></span><br><span class="line"><span class="comment">;(setq erc-autojoin-channels-alist </span></span><br><span class="line"> <span class="comment">;     '((".*\\.freenode.net" </span></span><br><span class="line">  <span class="comment">;       "#ubuntu-cn" </span></span><br><span class="line">   <span class="comment">;      "#archlinux-cn"))) </span></span><br><span class="line"></span><br><span class="line">(<span class="name">setq</span> outline-minor-mode-prefix <span class="string">"\C-o"</span>)</span><br><span class="line"><span class="comment">;(outline-minor-mode t)</span></span><br><span class="line"><span class="comment">;(add-hook 'text-mode-hook 'outline-minor-mode)</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">;(require 'highlight-tail)</span></span><br><span class="line"><span class="comment">; (message "Highlight-tail loaded - now your Emacs will be even more sexy!")</span></span><br><span class="line"><span class="comment">;; ; [ here some setq of variables ]</span></span><br><span class="line"><span class="comment">; </span></span><br><span class="line"><span class="comment">;; (setq highlight-tail-colors '(("#6ca6cd" . 0)</span></span><br><span class="line"><span class="comment">;;                               ("#7ec0ee" . 25)</span></span><br><span class="line"><span class="comment">;; 			      ("#87CEFF" . 30)))</span></span><br><span class="line"><span class="comment">;(setq highlight-tail-colors</span></span><br><span class="line"> <span class="comment">;       '(("#c1e156" . 0)</span></span><br><span class="line">  <span class="comment">;        ("#b8ff07" . 25)</span></span><br><span class="line">   <span class="comment">;       ("#00c377" . 60)))</span></span><br><span class="line"></span><br><span class="line"><span class="comment">;; (setq highlight-tail-steps 14</span></span><br><span class="line"><span class="comment">;;       highlight-tail-timer 1)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">;; (setq highlight-tail-posterior-type 'const)</span></span><br><span class="line"><span class="comment">;(highlight-tail-reload)</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/emacs/" rel="tag">#emacs</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/Hexo/Hexo创建标签和分类页面.html" rel="next" title="Hexo创建标签和分类页面">
+                <i class="fa fa-chevron-left"></i> Hexo创建标签和分类页面
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/Linux/emacs/plugins.html" rel="prev" title="Emacs插件">
+                Emacs插件 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="阿飞" />
+          <p class="site-author-name" itemprop="name">阿飞</p>
+          <p class="site-description motion-element" itemprop="description">I believe that my life will not as mediocre as you!</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">24</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">阿飞</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

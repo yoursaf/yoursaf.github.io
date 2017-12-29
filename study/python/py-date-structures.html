@@ -1,0 +1,656 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Roboto Slab:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="数据结构  数据结构——Data Structures，它们只是一种结构，能够将一些数据聚合在一起。换句话说，它们是用来存储一系列相关数据的集合。 Python 中有四种内置的数据结构——列表（List）、元组（Tuple）、字典（Dictionary）和集合（Set）。 类于对象   一个类（Class）能够创建一种新的类型（Type），对象（Object）是类的实例（Instance）。对象可">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python数据结构">
+<meta property="og:url" content="http://yoursaf.cn/study/python/py-date-structures.html">
+<meta property="og:site_name" content="冷兵器时代">
+<meta property="og:description" content="数据结构  数据结构——Data Structures，它们只是一种结构，能够将一些数据聚合在一起。换句话说，它们是用来存储一系列相关数据的集合。 Python 中有四种内置的数据结构——列表（List）、元组（Tuple）、字典（Dictionary）和集合（Set）。 类于对象   一个类（Class）能够创建一种新的类型（Type），对象（Object）是类的实例（Instance）。对象可">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-12-11T11:38:29.524Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python数据结构">
+<meta name="twitter:description" content="数据结构  数据结构——Data Structures，它们只是一种结构，能够将一些数据聚合在一起。换句话说，它们是用来存储一系列相关数据的集合。 Python 中有四种内置的数据结构——列表（List）、元组（Tuple）、字典（Dictionary）和集合（Set）。 类于对象   一个类（Class）能够创建一种新的类型（Type），对象（Object）是类的实例（Instance）。对象可">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursaf.cn/study/python/py-date-structures.html"/>
+
+  <title> Python数据结构 | 冷兵器时代 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">冷兵器时代</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">My life will not be mediocre.</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-links">
+          <a href="/links" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-link"></i> <br />
+            
+            链接
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-study">
+          <a href="/categories/study" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-book"></i> <br />
+            
+            学习
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Python数据结构
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-12-11T00:29:34+08:00" content="2017-12-11">
+              2017-12-11
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类：</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/study/" itemprop="url" rel="index">
+                    <span itemprop="name">study</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/study/python/" itemprop="url" rel="index">
+                    <span itemprop="name">python</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2>数据结构</h2>
+
+<p><strong>数据结构</strong>——Data Structures，它们只是一种结构，能够将一些数据聚合在一起。换句话说，它们是用来存储一系列相关数据的集合。</p>
+<p>Python 中有四种内置的数据结构——<strong>列表（List）</strong>、<strong>元组（Tuple）</strong>、<strong>字典（Dictionary）</strong>和<strong>集合（Set）</strong>。</p>
+<h2>类于对象</h2>
+
+<blockquote>
+<p>一个类（Class）能够创建一种新的类型（Type），对象（Object）是类的实例（Instance）。对象可以使用属于它的普通变量来存储数据。这种从属于对象或类的变量叫作字段（Field）。对象还可以使用属于类的函数来实现某些功能，这种函数叫作类的方法（Method）。</p>
+</blockquote>
+<figure class="highlight python"><figcaption><span>Class</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">name</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">method</span> <span class="params">(self)</span>:</span></span><br><span class="line">        field</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="1、列表"><a href="#1、列表" class="headerlink" title="1、列表"></a>1、列表</h2><p><strong>列表[List]</strong>，是一种用于保存一系列有序项目的集合，可以用列表保存一串项目的序列。</p>
+<p>项目的列表应该用方括号”[　]”括起来。列表是一种可变的数据类型。</p>
+<figure class="highlight python"><figcaption><span>List</span></figcaption><table><tr><td class="code"><pre><span class="line">listname = [Date1,Date2,...,Daten]</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h2 id="2、元组"><a href="#2、元组" class="headerlink" title="2、元组"></a>2、元组</h2><p><strong>元组（Tuple）</strong>,用于将多个对象保存到一起。你可以将它们近似地看作列表，元组的一大特征类似于字符串，它们是<em>不可变的</em>，也就是说，你不能编辑或更改元组。<br>元组是通过特别指定项目来定义的，在指定项目时，你可以给它们加上括号，并在括号内部用逗号”,”进行分隔。</p>
+<figure class="highlight python"><figcaption><span>Tuple</span></figcaption><table><tr><td class="code"><pre><span class="line">tuplename = (Date1,Date2,...,Daten)</span><br></pre></td></tr></table></figure>
+<h2 id="3、字典"><a href="#3、字典" class="headerlink" title="3、字典"></a>3、字典</h2><p>字典就像一本地址簿,我们将键值（Keys）与值（Values）联系到一起。键值必须是唯一的。只能使用不可变的对象（如字符串）作为字典的键值，但是你可以使用可变或不可变的对象作为字典中的值。<br><figure class="highlight python"><figcaption><span>Dict</span></figcaption><table><tr><td class="code"><pre><span class="line">dictname = &#123;key1:value1,</span><br><span class="line">    key2:value2,</span><br><span class="line">    ...,</span><br><span class="line">    keyn:valuen&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="4、集合"><a href="#4、集合" class="headerlink" title="4、集合"></a>4、集合</h2><p>集合（Set）是简单对象的<em>无序集合</em>（Collection）。当集合中的项目存在于否比起次序或其出现次数更重要时，我们就会使用集合。</p>
+<figure class="highlight python"><figcaption><span>Set</span></figcaption><table><tr><td class="code"><pre><span class="line">setname = set([<span class="string">'Date1'</span>,<span class="string">'Date2'</span>,...,<span class="string">'Daten'</span>])</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/work/cert.html" rel="next" title="石家庄蓝天救援队CERT建设推动计划">
+                <i class="fa fa-chevron-left"></i> 石家庄蓝天救援队CERT建设推动计划
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/study/python/py-functions.html" rel="prev" title="Python函数">
+                Python函数 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="阿飞" />
+          <p class="site-author-name" itemprop="name">阿飞</p>
+          <p class="site-description motion-element" itemprop="description">I believe that my life will not as mediocre as you!</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">25</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-text">数据结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-text">类于对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1、列表"><span class="nav-text">1、列表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、元组"><span class="nav-text">2、元组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、字典"><span class="nav-text">3、字典</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、集合"><span class="nav-text">4、集合</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">阿飞</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

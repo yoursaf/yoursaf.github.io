@@ -1,0 +1,652 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Roboto Slab:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="1、函数（Functions）　　函数（Functions）是指可重复使用的程序片段。它们允许你为某个代码块赋予名字，允许你通过这一特殊的名字在你的程序任何地方来运行代码块，并可重复任何次数。这就是所谓的调用（Calling）函数。函数可以通过关键字 def 来定义。这一关键字后跟一个函数的标识符名称，再跟一对圆括号，其中可以包括一些变量的名称，再以冒号结尾，结束这一行。随后而来的语句块是函数的一">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python函数">
+<meta property="og:url" content="http://yoursaf.cn/study/python/py-functions.html">
+<meta property="og:site_name" content="冷兵器时代">
+<meta property="og:description" content="1、函数（Functions）　　函数（Functions）是指可重复使用的程序片段。它们允许你为某个代码块赋予名字，允许你通过这一特殊的名字在你的程序任何地方来运行代码块，并可重复任何次数。这就是所谓的调用（Calling）函数。函数可以通过关键字 def 来定义。这一关键字后跟一个函数的标识符名称，再跟一对圆括号，其中可以包括一些变量的名称，再以冒号结尾，结束这一行。随后而来的语句块是函数的一">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-12-12T17:35:56.667Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python函数">
+<meta name="twitter:description" content="1、函数（Functions）　　函数（Functions）是指可重复使用的程序片段。它们允许你为某个代码块赋予名字，允许你通过这一特殊的名字在你的程序任何地方来运行代码块，并可重复任何次数。这就是所谓的调用（Calling）函数。函数可以通过关键字 def 来定义。这一关键字后跟一个函数的标识符名称，再跟一对圆括号，其中可以包括一些变量的名称，再以冒号结尾，结束这一行。随后而来的语句块是函数的一">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursaf.cn/study/python/py-functions.html"/>
+
+  <title> Python函数 | 冷兵器时代 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">冷兵器时代</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">My life will not be mediocre.</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-links">
+          <a href="/links" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-link"></i> <br />
+            
+            链接
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-study">
+          <a href="/categories/study" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-book"></i> <br />
+            
+            学习
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Python函数
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-12-12T05:15:52+08:00" content="2017-12-12">
+              2017-12-12
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类：</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/study/" itemprop="url" rel="index">
+                    <span itemprop="name">study</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/study/python/" itemprop="url" rel="index">
+                    <span itemprop="name">python</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="1、函数（Functions）"><a href="#1、函数（Functions）" class="headerlink" title="1、函数（Functions）"></a>1、函数（Functions）</h2><p>　　函数（Functions）是指可重复使用的程序片段。它们允许你为某个代码块赋予名字，允许你通过这一特殊的名字在你的程序任何地方来运行代码块，并可重复任何次数。这就是所谓的<em>调用</em>（Calling）函数。<br>函数可以通过关键字<strong> def </strong>来定义。这一关键字后跟一个函数的标识符名称，再跟一对圆括号，其中可以包括一些变量的名称，再以冒号结尾，结束这一行。随后而来的语句块是函数的一部分。</p>
+<figure class="highlight python"><figcaption><span>function</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">say_hello</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="comment"># 该块属于这一函数</span></span><br><span class="line">        print(<span class="string">'hello world'</span>)</span><br><span class="line">        <span class="comment"># 函数结束</span></span><br><span class="line">say_hello()  <span class="comment"># 调用函数</span></span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h2 id="2、函数参数（Arguments）"><a href="#2、函数参数（Arguments）" class="headerlink" title="2、函数参数（Arguments）"></a>2、函数参数（Arguments）</h2><p>　　函数可以获取参数，这个参数的值由你所提供，借此，函数便可以利用这些值来做一些事情。这些参数与变量类似，这些变量的值在我们调用函数时已被定义，且在函数运行时均已赋值完成。</p>
+<p>　　函数中的参数通过将其放置在用以定义函数的一对圆括号“（）”中指定，并通过逗号“，”予以分隔。当我们调用函数时，我们以同样的形式提供需要的值。要注意在此使用的术语——在定义函数时给定的名称称作 <strong>形参</strong> （Parameters），在调用函数时你所提供给函数的值称作 <strong>实参</strong> （Arguments）。</p>
+<figure class="highlight python"><figcaption><span>Arguments</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func</span><span class="params">(x,y)</span>:</span> <span class="comment">#定义函数时给定形参</span></span><br><span class="line">    <span class="keyword">print</span> (x+y) <span class="comment">#函数语句</span></span><br><span class="line">    <span class="comment">#函数结束</span></span><br><span class="line">func(x,y) <span class="comment">#调用函数时给定实参</span></span><br></pre></td></tr></table></figure>
+<h2 id="3、变量的作用域（Scope）"><a href="#3、变量的作用域（Scope）" class="headerlink" title="3、变量的作用域（Scope）"></a>3、变量的作用域（Scope）</h2><h3 id="局部变量（Local-Varibles）"><a href="#局部变量（Local-Varibles）" class="headerlink" title="局部变量（Local Varibles）"></a>局部变量（Local Varibles）</h3><p>　　当你在一个函数的定义中声明变量时，它们不会以任何方式与身处函数之外但具有相同名称的变量产生关系，也就是说，这些变量名只存在于函数这一 <em>局部</em> （Local）。这被称为变量的 <em>作用域</em> （Scope）。所有变量的作用域是它们被定义的块，从定义它们的名字的定义点开始。</p>
+<h3 id="global语句"><a href="#global语句" class="headerlink" title="global语句"></a>global语句</h3><p>　　如果你想给一个在程序顶层的变量赋值（也就是说它不存在于任何作用域中，无论是函数还是类），那么你必须告诉 Python 这一变量并非局部的，而是 <em>全局</em> （Global）的。我们需要通过 <strong>global</strong> 语句来完成这件事。因为在不使用 global 语句的情况下，不可能为一个定义于函数之外的变量赋值。</p>
+<p>　　你可以使用定义于函数之外的变量的值（假设函数中没有具有相同名字的变量）。然而，这种方式 <strong>不会受到鼓励而且应该避免</strong> ，因为它对于程序的读者来说是含糊不清的，无法弄清楚变量的定义究竟在哪。而通过使用 global 语句便可清楚看出这一变量是在最外边的代码块中定义的。</p>
+<h2 id="4、关键字参数（Keyword-Arguments）"><a href="#4、关键字参数（Keyword-Arguments）" class="headerlink" title="4、关键字参数（Keyword Arguments）"></a>4、关键字参数（Keyword Arguments）</h2><p>　　如果你有一些具有许多参数的函数，而你又希望只对其中的一些进行指定，那么你可以通过命名它们来给这些参数赋值——这就是 <em>关键字参数</em> （Keyword Arguments）——我们使用 <em>命名</em> （关键字）而非 <em>位置</em> （一直以来我们所使用的方式）来指定函数中的参数。</p>
+<figure class="highlight python"><figcaption><span>funtion_keyword.py</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func</span><span class="params">(a, b=<span class="number">5</span>, c=<span class="number">10</span>)</span>:</span></span><br><span class="line">    print(<span class="string">'a is'</span>, a, <span class="string">'and b is'</span>, b, <span class="string">'and c is'</span>, c)</span><br><span class="line">    </span><br><span class="line">func(<span class="number">3</span>, <span class="number">7</span>) <span class="comment">#参数a获得值3，参数b获得值7</span></span><br><span class="line">func(<span class="number">25</span>, c=<span class="number">24</span>) <span class="comment">#参数a获得值25，参数b使用默认值5，参数c获得值24</span></span><br><span class="line">func(c=<span class="number">50</span>, a=<span class="number">100</span>) <span class="comment">#参数c获得值50，参数b使用默认值5，参数a获得值100</span></span><br></pre></td></tr></table></figure>
+<h2 id="5、可变参数（VarArgs-Parameters）"><a href="#5、可变参数（VarArgs-Parameters）" class="headerlink" title="5、可变参数（VarArgs Parameters）"></a>5、可变参数（VarArgs Parameters）</h2><p>　　定义的函数里面能够有任意数量的变量，也就是参数数量是可变的，这可以通过使用星号来实现。<br>　　当我们声明一个诸如 *param 的星号参数时，从此处开始直到结束的所有位置参数（Positional Arguments）都将被收集并汇集成一个称为“param”的元组（Tuple）。<br>　　当我们声明一个诸如 **param 的双星号参数时，从此处开始直至结束的所有关键字参数都将被收集并汇集成一个名为 param 的字典（Dictionary）。</p>
+<figure class="highlight python"><figcaption><span>function_varargs.py</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">total</span><span class="params">(a=<span class="number">5</span>, *numbers, **phonebook)</span>:</span></span><br><span class="line">    print(<span class="string">'a'</span>, a)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> single_item <span class="keyword">in</span> numbers: <span class="comment">#遍历元组中的所有项目</span></span><br><span class="line">    print(<span class="string">'single_item'</span>, single_item)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> first_part, second_part <span class="keyword">in</span> phonebook.items(): <span class="comment">#遍历字典中的所有项目</span></span><br><span class="line">    print(first_part,second_part)</span><br><span class="line">    </span><br><span class="line">print(total(<span class="number">10</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,Jack=<span class="number">1123</span>,John=<span class="number">2231</span>,Inge=<span class="number">1560</span>))</span><br></pre></td></tr></table></figure>
+<h2 id="6、return语句"><a href="#6、return语句" class="headerlink" title="6、return语句"></a>6、return语句</h2><p>　　return 语句用于从函数中 <em>返回</em> ，也就是 <strong>中断函数</strong> 。我们也可以选择在中断函数时从函数中 <em>返回一个值</em> 。</p>
+<figure class="highlight python"><figcaption><span>func_return.py</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">maximum</span><span class="params">(x, y)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> x &gt; y:</span><br><span class="line">        <span class="keyword">return</span> x</span><br><span class="line">    <span class="keyword">elif</span> x == y:</span><br><span class="line">        <span class="keyword">return</span> <span class="string">'The numbers are equal'</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> y</span><br><span class="line">                                    </span><br><span class="line">print(maximum(<span class="number">2</span>, <span class="number">3</span>))</span><br></pre></td></tr></table></figure>
+<h2 id="7、文档字符串（DocStrings）"><a href="#7、文档字符串（DocStrings）" class="headerlink" title="7、文档字符串（DocStrings）"></a>7、文档字符串（DocStrings）</h2><p>　　Python 有一个甚是优美的功能称作文档字符串（Documentation Strings），在称呼它时通常会使用另一个短一些的名字docstrings。DocStrings 是一款你应当使用的重要工具，它能够帮助你更好地记录程序并让其更加易于理解。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/study/python/py-date-structures.html" rel="next" title="Python数据结构">
+                <i class="fa fa-chevron-left"></i> Python数据结构
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/study/python/py-modules.html" rel="prev" title="Python模块">
+                Python模块 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="阿飞" />
+          <p class="site-author-name" itemprop="name">阿飞</p>
+          <p class="site-description motion-element" itemprop="description">I believe that my life will not as mediocre as you!</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">24</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、函数（Functions）"><span class="nav-text">1、函数（Functions）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、函数参数（Arguments）"><span class="nav-text">2、函数参数（Arguments）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、变量的作用域（Scope）"><span class="nav-text">3、变量的作用域（Scope）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#局部变量（Local-Varibles）"><span class="nav-text">局部变量（Local Varibles）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#global语句"><span class="nav-text">global语句</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、关键字参数（Keyword-Arguments）"><span class="nav-text">4、关键字参数（Keyword Arguments）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5、可变参数（VarArgs-Parameters）"><span class="nav-text">5、可变参数（VarArgs Parameters）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6、return语句"><span class="nav-text">6、return语句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7、文档字符串（DocStrings）"><span class="nav-text">7、文档字符串（DocStrings）</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">阿飞</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

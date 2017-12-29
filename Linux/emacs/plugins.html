@@ -1,0 +1,666 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Roboto Slab:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="emacs," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="Emacs常用扩展   sr-speedbar yasnippet">
+<meta name="keywords" content="emacs">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Emacs插件">
+<meta property="og:url" content="http://yoursaf.cn/Linux/emacs/plugins.html">
+<meta property="og:site_name" content="冷兵器时代">
+<meta property="og:description" content="Emacs常用扩展   sr-speedbar yasnippet">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-11-09T09:55:27.989Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Emacs插件">
+<meta name="twitter:description" content="Emacs常用扩展   sr-speedbar yasnippet">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursaf.cn/Linux/emacs/plugins.html"/>
+
+  <title> Emacs插件 | 冷兵器时代 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">冷兵器时代</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">My life will not be mediocre.</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-links">
+          <a href="/links" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-link"></i> <br />
+            
+            链接
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-study">
+          <a href="/categories/study" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-book"></i> <br />
+            
+            学习
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Emacs插件
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-09-11T01:50:22+08:00" content="2016-09-11">
+              2016-09-11
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类：</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Linux/emacs/" itemprop="url" rel="index">
+                    <span itemprop="name">emacs</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>Emacs常用扩展</p>
+<blockquote>
+<ol>
+<li>sr-speedbar</li>
+<li>yasnippet</li>
+</ol>
+</blockquote>
+<a id="more"></a>
+<h1 id="1、sr-speedbar"><a href="#1、sr-speedbar" class="headerlink" title="1、sr-speedbar"></a>1、sr-speedbar</h1><p><br></p>
+<blockquote><p>SrSpeedbar is a mode that makes SpeedBar show in the Current Frame, by SebastianRose.</p>
+<footer><strong>EmacsWiki</strong><cite><a href="https://www.emacswiki.org/emacs/SrSpeedbar" target="_blank" rel="external">www.emacswiki.org/emacs/SrSpeedbar</a></cite></footer></blockquote>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>将<a href="https://www.emacswiki.org/emacs/sr-speedbar.el" target="_blank" rel="external">sr-speedbar.el</a>放入load-path,在<code>~/.emacs</code>中添加以下代码：<br><figure class="highlight lisp"><table><tr><td class="code"><pre><span class="line">(<span class="name">require</span> 'sr-speedbar)</span><br></pre></td></tr></table></figure></p>
+<h2 id="自定义"><a href="#自定义" class="headerlink" title="自定义"></a>自定义</h2><figure class="highlight lisp"><table><tr><td class="code"><pre><span class="line">(<span class="name">setq</span> speedbar-show-unknown-files <span class="literal">t</span>)</span><br><span class="line">(<span class="name">setq</span> speedbar-use-images <span class="literal">nil</span>)</span><br><span class="line">(<span class="name">setq</span> sr-speedbar-width <span class="number">30</span>)</span><br><span class="line">(<span class="name">setq</span> sr-speedbar-right-side <span class="literal">nil</span>)</span><br><span class="line">(<span class="name">global-set-key</span> (<span class="name">kbd</span> “&lt;f5&gt;”) (<span class="name">lambda</span>()</span><br><span class="line">                             (<span class="name">interactive</span>)</span><br><span class="line">                             (<span class="name">sr-speedbar-toggle</span>)))</span><br></pre></td></tr></table></figure>
+<p><br></p>
+<h1 id="2、yasnippet"><a href="#2、yasnippet" class="headerlink" title="2、yasnippet"></a>2、yasnippet</h1><p><br></p>
+<p><a href="https://github.com/joaotavora/yasnippet" target="_blank" rel="external">yasnippet下载地址</a></p>
+<p><a href="https://github.com/AndreaCrotti/yasnippet-snippets" target="_blank" rel="external">片段代码库下载地址</a></p>
+<h2 id="安装："><a href="#安装：" class="headerlink" title="安装："></a>安装：</h2><p>Add the following in your <code>.emacs</code> file:<br><figure class="highlight lisp"><table><tr><td class="code"><pre><span class="line">(<span class="name">add-to-list</span> 'load-path <span class="string">"~/.emacs.d/plugins/yasnippet"</span>)</span><br><span class="line">(<span class="name">require</span> 'yasnippet)</span><br><span class="line">(<span class="name">yas-global-mode</span> <span class="number">1</span>)</span><br></pre></td></tr></table></figure></p>
+<h2 id="变量示例："><a href="#变量示例：" class="headerlink" title="变量示例："></a>变量示例：</h2><blockquote><p># name: test<br># key: test<br># —<br>this is field $1<br>this is field ${2:default text}<br>this is a mirror $2<br>this is a mirror with transformation ${2:$(upcase text)}</p>
+</blockquote>
+<h2 id="可以直接在已有的模板上添加修改，为输入添加选项"><a href="#可以直接在已有的模板上添加修改，为输入添加选项" class="headerlink" title="可以直接在已有的模板上添加修改，为输入添加选项"></a>可以直接在已有的模板上添加修改，为输入添加选项</h2><blockquote>
+<p># name: test2<br>    # key: test2<br>    # —</p>
+</blockquote>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/emacs/" rel="tag">#emacs</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/Linux/emacs/emacsconfig.html" rel="next" title="我的Emacs设置">
+                <i class="fa fa-chevron-left"></i> 我的Emacs设置
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/study/3dkjj.html" rel="prev" title="3DsMax常用快捷键">
+                3DsMax常用快捷键 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="阿飞" />
+          <p class="site-author-name" itemprop="name">阿飞</p>
+          <p class="site-description motion-element" itemprop="description">I believe that my life will not as mediocre as you!</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">24</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1、sr-speedbar"><span class="nav-text">1、sr-speedbar</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自定义"><span class="nav-text">自定义</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2、yasnippet"><span class="nav-text">2、yasnippet</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装："><span class="nav-text">安装：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#变量示例："><span class="nav-text">变量示例：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#可以直接在已有的模板上添加修改，为输入添加选项"><span class="nav-text">可以直接在已有的模板上添加修改，为输入添加选项</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">阿飞</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

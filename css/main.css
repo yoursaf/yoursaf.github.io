@@ -1512,7 +1512,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff75af;
+  background: #ffe982;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2518,7 +2518,7 @@ h6 {
 }
 p {
   margin: 0 0 5px 0;
-  text-shadow: 1px 2px 1px #000;
+  text-shadow: 1px 1px 1px #000;
 }
 p a {
   text-shadow: none;
@@ -2644,7 +2644,7 @@ a:hover {
   text-shadow: 0.5px 0.5px 3px rgba(0,0,0,0.5);
 }
 .posts-collapse .post-title a {
-  color: #888;
+  color: #ccc;
   -webkit-transform: color 0.5s;
   -moz-transform: color 0.5s;
   -ms-transform: color 0.5s;
